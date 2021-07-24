@@ -19,7 +19,7 @@ driver = webdriver.Chrome(
 
 #driver.getを使用し、サイトにアクセスを行う。(sleepを挟んで負荷をかけすぎないようにする。)
 driver.get("https://www.google.co.jp")
-sleep(3)
+sleep(2)
 
 #要素から抜ける
 driver.quit()
