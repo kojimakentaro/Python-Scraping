@@ -5,6 +5,7 @@ from time import sleep
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import os
 
 
 options = webdriver.ChromeOptions()
@@ -78,6 +79,24 @@ while True:
 #サイトのurlも取得したい場合のコード
     #print(h2_tag.get_attribute("href"))
     #print(h2_tag.get_attribute("outHTML"))
+
+
+#seleniumで各URLにアクセスして、ページのHTMLを取得する
+dir_name = os.path.dirname(os.path.abspath(__file__))
+for i,url in enumerate(url):
+    print("="*30, i,"="*30)
+    print(url)
+    driver.get(url)
+    sleep(5)
+
+    html = driver.page_source
+
+    #p = f"/Users/kojimakentaro/Python-Scraping/html/{driver.title}.html"
+    p = os.path.join(dir_name,"html",f"{driver.title}.html")
+
+    with open(p,"w") as f:
+        f.write(html)
+
 
 
 #要素から抜ける
