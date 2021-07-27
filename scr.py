@@ -10,7 +10,7 @@ import os
 
 options = webdriver.ChromeOptions()
 #ヘッドレスモード(使用することにより、実際のサイトの表示はなくなる)
-#options.add_argument("--headless")
+options.add_argument("--headless")
 #シークレットモード
 #options.add_argument("--incognito")
 
@@ -40,7 +40,7 @@ sleep(2)
 
 #print(a)
 #print(a.text)
-
+"""
 #検索タブに関しての操作(文字を入力を行う)
 search_box = driver.find_element_by_css_selector("input.nxrKmn7Pk9iZExZ0kdJ4Z")
 sleep(2)
@@ -56,7 +56,7 @@ while True:
     sleep(2)
 
     #次のページのボタンを押す
-    a = driver.find_elements_by_css_selector("div..Contents__inner.Co > div > div > div > div > a")
+    a = driver.find_elements_by_css_selector("div.Contents__inner.Co > div > div > div > div > a")
     sleep(3)
 
     #ページ移動のボタンを押す
@@ -97,6 +97,8 @@ for i,url in enumerate(url):
     with open(p,"w") as f:
         f.write(html)
 
+
+"""
 
 
 #要素から抜ける
