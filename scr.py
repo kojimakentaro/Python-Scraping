@@ -99,8 +99,6 @@ for i,url in enumerate(url):
 
 
 """
-
-
 #要素から抜ける
 driver.quit()
 
