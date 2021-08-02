@@ -36,6 +36,6 @@ for company in companies:
         "company_url":company_url
     })
 
-#csvで保存
+
 df = pd.DataFrame(d_list)
 df.to_csv("company.csv",index=None,encoding="utf-8-sig")
